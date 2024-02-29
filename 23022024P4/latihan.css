@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/cyan.jpg');
+}
+
+fieldset,
+legend {
+    border-width: 3px;
+    border-color: rgb(4, 23, 27);
+    border-radius: 30px;
+}
+
+legend {
+    padding: 10px;
+    background-color: rgba(72, 197, 247, 0.726);
+    color: white;
+    font-weight: bold;
+    font-size: 14pt;
+}
+button,p.arah{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: aqua;
+    background-color: rgb(107, 107, 219);
+}
+button,p.arah a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: large;
+}
+button,p.direk{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: aqua;
+    background-color: rgb(107, 107, 219);
+}
+button,p.direk a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: large;
+}
+.prfl{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    
+}

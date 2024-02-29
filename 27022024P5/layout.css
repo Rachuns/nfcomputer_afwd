@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.header{
+    background-image: url('https://img.freepik.com/free-vector/watercolor-paper-with-floral-design_53876-97360.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
