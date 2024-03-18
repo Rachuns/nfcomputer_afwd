@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 JavaScript</title>
+</head>
+
+<body>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <h3>Latihan 1 JavaScript</h3>
+    </marquee>
+    <hr />
+    <script>
+        var nama = "Ridwan";
+        var jabatan = "Manager";
+        var status = "Menikah";
+        var gaji_pokok;
+
+        if (jabatan == "Manager") {
+            gaji_pokok = 15000000
+        } else if (jabatan == "Asisten Manager") {
+            gaji_pokok = 10000000
+        } else if (jabatan == "Staff") {
+            gaji_pokok = 5000000
+        } else {
+            document.write("Jabatan Tidak Valid");
+        }
+
+        var tunjangan_jabatan = 0.15 * gaji_pokok;
+        var bpjs = 0.10 * gaji_pokok;
+        var tunjangan_keluarga;
+        if (status === "Menikah") {
+            tunjangan_keluarga = 0.20 * gaji_pokok;
+        } else {
+            tunjangan_keluarga = 0;
+        }
+
+
+        //tampilan table
+
+        var totalgaji = gaji_pokok + tunjangan_jabatan + bpjs + tunjangan_keluarga;
+
+        var data = [];
+        data.push([nama,
+            jabatan,
+            status,
+            gaji_pokok,
+            tunjangan_jabatan,
+            bpjs,
+            tunjangan_keluarga,
+            totalgaji
+        ]);
+
+        var tableBody = document.querySelector("tbody");
+
+        for (var i = 0; i < data.length; i++) {
+            var row = tableBody.insertRow();
+            for (var j = 0; j < data[i].length; j++) {
+                var cell = row.insertCell();
+                cell.textContent = data[i][j];
+            }
+        }
+
+        document.write(table.outerHTML);
+
+        // var totalgaji = gaji_pokok + tunjangan_jabatan + bpjs + tunjangan_keluarga;
+        // document.write("Nama pegawai : " + nama);
+        // document.write("<br>Jabatan : " + jabatan);
+        // document.write("<br>Status : " + status);
+        // document.write("<br>Gaji Pokok : " + gaji_pokok);
+        // document.write("<br>Tunjangan Jabatan : " + tunjangan_jabatan);
+        // document.write("<br>BPJS : " + bpjs);
+        // document.write("<br>Tunjangan Keluarga : " + tunjangan_keluarga);
+        // document.write("<br>Total Gaji : " + totalgaji);
+    </script>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Jabatan</th>
+                <th>Status</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>BPJS</th>
+                <th>Tunjangan Keluarga</th>
+                <th>Total Gaji</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><script>document.write(nama);</script></td>
+                <td><script>document.write(jabatan);</script></td>
+                <td><script>document.write(status);</script></td>
+                <td>Rp. <script>document.write(gaji_pokok);</script></td>
+                <td>Rp. <script>document.write(tunjangan_jabatan);</script></td>
+                <td>Rp. <script>document.write(bpjs);</script></td>
+                <td>Rp. <script>document.write(tunjangan_keluarga);</script></td>
+                <td>Rp. <script>document.write(totalgaji);</script></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
