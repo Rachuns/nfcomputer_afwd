@@ -1,10 +1,10 @@
 #hasil {
     width: 50%;
-    background-color: rgb(232, 238, 240);
     border: 1px solid black;
     margin: auto;
     padding: 10px;
     text-align: center;
+    background-color: rgb(232, 238, 240);
 }
 
 .form-input {
